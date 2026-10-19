@@ -1,16 +1,16 @@
-﻿<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <project xmlns="http://maven.apache.org/POM/4.0.0"
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
   <modelVersion>4.0.0</modelVersion>
 
   <groupId>co.edu.unbosque</groupId>
-  <artifactId>aplicacionelevador</artifactId>
+  <artifactId>bancoabc</artifactId>
   <version>1.0.0</version>
   <packaging>jar</packaging>
 
-  <name>Simulador de Elevador</name>
-  <description>Simulador de ascensor que permite moverse entre pisos, manteniendolo en un numero de planta definido.</description>
+  <name>Banking System ABC</name>
+  <description>Complete banking system: manage clients, savings and checking accounts, and run consignments, withdrawals and transfers from a console interface. Built with an **MVC** architecture and custom exceptions for banking rules (insufficient balance, blocked overdraft, inactive accounts), with configuration read from `config.properties`.</description>
 
   <properties>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
@@ -23,13 +23,13 @@
     <plugins>
       <plugin>
         <groupId>org.apache.maven.plugins</groupId>
-        <artifactId>maven-compiler-plugin</artifactId>
+        <artifactId>bancoabc</artifactId>
         <version>3.13.0</version>
       </plugin>
 
       <plugin>
         <groupId>org.codehaus.mojo</groupId>
-        <artifactId>exec-maven-plugin</artifactId>
+        <artifactId>bancoabc</artifactId>
         <version>3.2.0</version>
         <configuration>
           <mainClass>${exec.mainClass}</mainClass>
