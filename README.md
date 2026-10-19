@@ -1,69 +1,57 @@
-﻿# Sistema Bancario ABC
+﻿# ðŸ¦ Sistema Bancario ABC
 
-Sistema bancario completo con clientes, cuentas de ahorro y corriente, consignaciones, retiros y transferencias.
+Sistema bancario completo con clientes, cuentas de ahorro y corriente, consignaciones, retiros y transferencias. Desarrollado en Java con arquitectura **MVC** para consola.
 
-## Detalle
+## ðŸ“‹ CaracterÃ­sticas
 
-| | |
-|---|---|
-| Tipo | Consola (MVC) |
-| Archivos Java | 15 |
-| Version de Java | 21 |
-| Patron | Arquitectura MVC con excepciones personalizadas y configuracion por properties |
+- GestiÃ³n de clientes y cuentas bancarias
+- Cuentas de ahorro y corriente con reglas distintas
+- Operaciones: consignaciones, retiros y transferencias
+- Manejo de excepciones bancarias (saldo insuficiente, sobregiro no permitido, cuenta inactiva)
+- Gestor centralizado de banco (`GestorBanco`)
+- Registro de movimientos y transacciones
+- Interfaz por consola
 
-## Funcionalidades
+## ðŸ› ï¸ TecnologÃ­as
 
-- Gestion de clientes
-- Cuentas de ahorro y corriente
-- Consignaciones, retiros y transferencias
-- Excepciones propias de dominio
-- Configuracion externa en archivo properties
-- Persistencia de movimientos
+- Java
+- Maven
+- PatrÃ³n MVC
+- ProgramaciÃ³n orientada a objetos
 
-## Estructura del proyecto
+## ðŸš€ CÃ³mo ejecutar
+
+```bash
+git clone https://github.com/P2X4A/bancoABC.git
+cd bancoABC
+mvn clean compile
+mvn exec:java -Dexec.mainClass="AplMain"
+```
+
+## ðŸ“ Estructura
 
 ```
 bancoABC/
-|-- pom.xml       configuracion de Maven, importable desde cualquier IDE
-|-- src/          codigo fuente
-`-- README.md
+â”œâ”€â”€ pom.xml
+â”œâ”€â”€ README.md
+â”œâ”€â”€ LICENSE
+â”œâ”€â”€ config.properties
+â”œâ”€â”€ src/
+â”‚   â”œâ”€â”€ AplMain.java
+â”‚   â”œâ”€â”€ Controlador.java
+â”‚   â”œâ”€â”€ Consola.java
+â”‚   â”œâ”€â”€ Cliente.java
+â”‚   â”œâ”€â”€ Cuenta.java, CuentaAhorro.java, CuentaCorriente.java
+â”‚   â”œâ”€â”€ GestorBanco.java
+â”‚   â”œâ”€â”€ Transaccion.java, MovimientoConsignacion.java
+â”‚   â””â”€â”€ *.Excepcion.java (excepciones bancarias)
+â””â”€â”€ ...
 ```
 
-## Como ejecutarlo
+## ðŸ‘¨â€ðŸ’» Autor
 
-### Con Maven
+Sergio Parra
 
-```bash
-mvn clean compile
-mvn exec:java
-```
+---
 
-### Con javac directamente
-
-```bash
-# Linux / macOS
-javac -d bin $(find src -name "*.java")
-
-# Windows (PowerShell)
-javac -d bin (Get-ChildItem -Recurse -Filter *.java src).FullName
-```
-
-```bash
-java -cp bin co.edu.unbosque.controller.AplMain
-```
-
-### Desde un IDE
-
-Cualquier IDE con soporte de Java (Eclipse, IntelliJ IDEA, VS Code o NetBeans)
-puede importar el proyecto directamente como **proyecto Maven**. Basta con abrir
-o importar la carpeta: el IDE detecta el `pom.xml`, resuelve las dependencias y
-compila sin configuracion adicional.
-
-## Autor
-
-Desarrollado por [Sergio Parra](https://github.com/P2X4A) como parte de su
-formacion en Java.
-
-## Licencia
-
-Ver el archivo [LICENSE](LICENSE).
+*Proyecto acadÃ©mico para portafolio.*
